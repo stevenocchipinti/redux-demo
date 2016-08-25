@@ -4,6 +4,10 @@ body {
   font-family: sans-serif;
 }
 
+div {
+  box-sizing: border-box;
+}
+
 header {
   height: 40px;
   background: #026aa7;
@@ -35,6 +39,7 @@ header {
 }
 
 .lane-placeholder {
+
   background-color: #006ba9;
   border: none;
   padding: 15px;

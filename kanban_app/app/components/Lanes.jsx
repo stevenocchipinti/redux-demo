@@ -1,5 +1,6 @@
 import React from 'react';
 import Lane from './Lane.jsx';
+import LanePlaceholder from '../containers/LanePlaceholder.jsx';
 
 export default ({lanes}) => {
   let laneComponents = lanes.map(lane => {
@@ -8,7 +9,7 @@ export default ({lanes}) => {
   return (
     <div className="lanes">
       {laneComponents}
-      <div className="lane-placeholder">Add a lane...</div>
+      <LanePlaceholder />
     </div>
   );
 };
