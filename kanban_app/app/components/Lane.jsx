@@ -31,9 +31,6 @@ class Lane extends React.Component {
       <div {...props}>
         <div className="lane-header"
           onClick={() => props.updateLane({id: laneId, editing: true})}>
-          <div className="lane-add-note">
-            <button onClick={this.addNote.bind(this, laneId)}>+</button>
-          </div>
           <Editable className="lane-name" editing={lane.editing}
             value={lane.name}
             onEdit={name => props.updateLane({id: laneId, name, editing: false})} />
@@ -45,7 +42,11 @@ class Lane extends React.Component {
           notes={laneNotes}
           onValueClick={id => props.updateNote({id, editing: true})}
           onEdit={(id, task) => props.updateNote({id, task, editing: false})}
-          onDelete={(id, e) => this.deleteNote(laneId, id, e)} />
+          onDelete={(id, e) => this.deleteNote(laneId, id, e)}
+        />
+        <div onClick={this.addNote.bind(this, laneId)} className="lane-add-note">
+          Add a card...
+        </div>
       </div>
     );
   }

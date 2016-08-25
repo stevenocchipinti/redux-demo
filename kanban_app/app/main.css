@@ -1,29 +1,56 @@
 body {
-  background: cornsilk;
-
+  background: #0079bf;
+  margin: 0;
   font-family: sans-serif;
 }
 
-.lane {
+header {
+  height: 40px;
+  background: #026aa7;
+}
+
+.title-logo {
+  color: #7fb2d1;
+  display: inline-block;
+  font-size: 20px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.lanes {
+  margin: 10px;
+}
+
+.lane, .lane-placeholder {
   display: inline-block;
 
-  margin: 1em;
+  margin: 5px;
 
-  background-color: #efefef;
+  background-color: #e2e4e6;
   border: 1px solid #ccc;
-  border-radius: 0.5em;
+  border-radius: 3px;
 
-  min-width: 10em;
+  min-width: 270px;
   vertical-align: top;
+}
+
+.lane-placeholder {
+  background-color: #006ba9;
+  border: none;
+  padding: 15px;
+  color: #b3d3e5;
+  font-size: 15px;
+  cursor: pointer;
+}
+.lane-placeholder:hover {
+  background-color: #005586;
+  transition: .3s;
 }
 
 .lane-header {
   overflow: auto;
 
-  padding: 1em;
-
-  color: #efefef;
-  background-color: #333;
+  padding: 10px 10px 0 10px;
 
   border-top-left-radius: 0.5em;
   border-top-right-radius: 0.5em;
@@ -31,12 +58,22 @@ body {
 
 .lane-name {
   float: left;
+  font-weight: bold;
+  font-size: 15px;
+  color: #444;
 }
 
 .lane-add-note {
-  float: left;
+  color: #8c8c8c;
+  padding: 10px;
+  font-size: 15px;
+}
 
-  margin-right: 0.5em;
+.lane-add-note:hover {
+  color: #4d4d4d;
+  background-color: #cdd2d4;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 .lane-delete {
@@ -50,11 +87,16 @@ body {
   visibility: visible;
 }
 
-.add-lane, .lane-add-note button {
+.add-lane {
   cursor: pointer;
-
-  background-color: #fdfdfd;
-  border: 1px solid #ccc;
+  background-color: #3888b7;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  height: 30px;
+  width: 30px;
+  margin: 5px;
+  font-size: 20px;
 }
 
 .lane-delete button {
@@ -62,7 +104,8 @@ body {
 
   cursor: pointer;
 
-  color: white;
+  font-size: 15px;
+  color: #999;
   background-color: rgba(0, 0, 0, 0);
   border: 0;
 }
@@ -71,20 +114,22 @@ body {
   margin: 0.5em;
   padding-left: 0;
 
-  max-width: 10em;
+  max-width: 270px;
   list-style: none;
 }
 
 .note {
-  margin-bottom: 0.5em;
-  padding: 0.5em;
+  margin-bottom: 5px;
+  padding: 8px;
 
-  background-color: #fdfdfd;
-  box-shadow: 0 0 0.3em .03em rgba(0,0,0,.3);
+  background-color: #fff;
+  border-radius: 3px;
+  border-bottom: 1px solid #ccc;
+
+  font-size: 15px;
 }
 .note:hover {
-  box-shadow: 0 0 0.3em .03em rgba(0,0,0,.7);
-
+  box-shadow: 0 0 1px 1px rgba(0,0,0,.2);
   transition: .6s;
 }
 
@@ -107,4 +152,20 @@ body {
 }
 .note:hover .delete {
   visibility: visible;
+}
+
+.badges {
+  color: #888;
+  padding: 8px 3px 3px 3px;
+}
+
+.thumb-icon:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+.thumb-icon {
+  opacity: 0.5;
+  height: 15px;
+  width: 15px;
+  margin-right: 5px;
 }

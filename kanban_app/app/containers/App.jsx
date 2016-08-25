@@ -12,10 +12,13 @@ class App extends React.Component {
 
     return (
       <div>
-        <button className="add-lane"
-          onClick={createLane.bind(null, {
-            name: 'New lane'
-          })}>+</button>
+        <header>
+          <button
+            className="add-lane"
+            onClick={createLane.bind(null, { name: 'New lane' })}
+          >+</button>
+          <h1 className="title-logo">IdeaBoardz</h1>
+        </header>
         <Lanes lanes={lanes} />
       </div>
     );

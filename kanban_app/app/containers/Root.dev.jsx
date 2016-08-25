@@ -7,6 +7,5 @@ export default ({store}) =>
   <Provider store={store}>
     <div>
       <App />
-      <DevTools />
     </div>
   </Provider>
